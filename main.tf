@@ -13,10 +13,10 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"]  # canonical ubuntu AWS account id
 }
 
-resource "aws_instance" "test-pipeline" {
+resource "aws_instance" "test2-pipeline" {
     ami           = data.aws_ami.ubuntu.id
     instance_type = "t2.micro"
     tags = {
-        Name = "test-pipeline"
+        Name = "test2-pipeline"
     }
 }
